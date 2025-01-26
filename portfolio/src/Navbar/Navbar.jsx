@@ -51,7 +51,7 @@ const Navbar = () => {
                     <a className='block text-blue-600' href='https://drive.google.com/file/d/1aMg3tmxVF1ORWV62aOZXzmT7ZmgGCX5n/view?usp=drive_link'>Resume</a>
                 </div>
             )}
-        </nav>
+        </nav>      
     );
 };
 
