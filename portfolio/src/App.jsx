@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar/Navbar';
 import About from './About/About';
 import Education from './Education/Education';
-import PE from './ProfessionalExperience/PE.Jsx';
+import Experience from './Professional/Experience';
 import Projects from './Projects/Projects';
 import Connect from './Connect/Connect';
 import Footer from './Footer/Footer';
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <About />
       <Education/>
-      <PE/>
+      <Experience/>
       <Projects/>
       <Connect />
       <Footer />
