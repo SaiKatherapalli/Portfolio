@@ -8,7 +8,7 @@ function About() {
             </h1>
             <img
                 className="w-48 h-48 lg:w-60 lg:h-60 rounded-full object-cover shadow-md border-2 border-blue-600 animate-slideIn"
-                src="/Images/Dp.jpg"
+                src="/images/Dp.jpg"
                 alt="Sai Deepak"
             />
             <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-600 text-center animate-slideIn">
