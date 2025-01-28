@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Dp from '../assets/images/Dp.jpg'
 function About() {
     return (
         <div id="about" className="border bg-white flex flex-col items-center space-y-6 m-2 mb-4 rounded-lg shadow-md p-8 animate-slideIn shadow-slate-600">
@@ -8,7 +8,7 @@ function About() {
             </h1>
             <img
                 className="w-48 h-48 lg:w-60 lg:h-60 rounded-full object-cover shadow-md border-2 border-blue-600 animate-slideIn"
-                src="/Images/Dp.jpg"
+                src={Dp}
                 alt="Sai Deepak"
             />
             <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-600 text-center animate-slideIn">
