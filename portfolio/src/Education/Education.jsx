@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const Education = () => {
     return (
-        <div className='mb-4 mt-3 m-2 p-4 shadow-md rounded-lg shadow-slate-600 animate-slideIn border-t border-t-gray-200 bg-gradient-to-r from-blue-600 to-blue-400'>
+        <div id="education" className='mb-4 mt-3 m-2 p-4 shadow-md rounded-lg shadow-slate-600 animate-slideIn border-t border-t-gray-200 bg-gradient-to-r from-blue-600 to-blue-400'>
             <h1 className='text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold'>Education</h1>
             <div className='flex flex-col justify-center animate-slideIn'>
                 <div className='border border-slate-300 p-5 m-5 rounded-lg transition duration-300 shadow-md w-auto h-30 bg-gradient-to-r from-red-600 to-red-300'>

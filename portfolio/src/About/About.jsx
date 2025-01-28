@@ -2,7 +2,7 @@ import React from 'react';
 
 function About() {
     return (
-        <div className="border bg-white flex flex-col items-center space-y-6 m-2 mb-4 rounded-lg shadow-md p-8 animate-slideIn shadow-slate-600">
+        <div id="about" className="border bg-white flex flex-col items-center space-y-6 m-2 mb-4 rounded-lg shadow-md p-8 animate-slideIn shadow-slate-600">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 p-4 text-center hover:scale-105 transition duration-300">
                 I'm Sai Deepak Kumar Reddy Katherapalli
             </h1>
@@ -19,6 +19,7 @@ function About() {
                 Crafting scalable, user-focused solutions with expertise in Python, Java, React.js, AWS, and Docker.
                 I thrive in Agile environments, tackling challenges and building exceptional software.
             </p>
+
         </div>
     );
 }

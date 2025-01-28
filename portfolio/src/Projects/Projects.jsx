@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 const Projects = () => {
     return (
-        <div className="flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-blue-400 p-8 rounded-lg shadow-lg space-y-4 m-2">
+        <div id="projects" className="flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-blue-400 p-8 rounded-lg shadow-lg space-y-4 m-2">
             <h2 className="text-2xl md:text-3xl font-bold text-white text-center">
                 Explore My Projects
             </h2>
