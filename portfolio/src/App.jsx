@@ -6,6 +6,7 @@ import Experience from './Professional/Experience';
 import Projects from './Projects/Projects';
 import Connect from './Connect/Connect';
 import Footer from './Footer/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Projects/>
       <Connect />
       <Footer />
+      <Analytics/>
     </div>
   );
 }
