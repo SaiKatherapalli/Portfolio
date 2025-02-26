@@ -35,7 +35,7 @@ const Navbar = () => {
                     <a onClick={() => Scroll('experience')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Professional Experience</a>
                     <a onClick={() => Scroll('projects')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Projects</a>
                     <a onClick={() => Scroll('connect')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Connect</a>
-                    <a className='text-white hover:bg-green-500 transform duration-300 text-lg bg-blue-500 rounded-lg p-1 px-2' href='https://drive.google.com/file/d/10LhpLtvPON4vRbjEtgLBmQGiSSCgNvsq/view?usp=sharing' target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a className='text-white hover:bg-green-500 transform duration-300 text-lg bg-blue-500 rounded-lg p-1 px-2' href='https://drive.google.com/file/d/10LhpLtvPON4vRbjEtgLBmQGiSSCgNvsq/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
 
                 <div className='md:hidden flex items-center'>
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <a onClick={() => Scroll('experience')} className='block text-blue-600 cursor-pointer'>Professional Experience</a>
                     <a onClick={() => Scroll('projects')} className='block text-blue-600 cursor-pointer'>Projects</a>
                     <a onClick={() => Scroll('connect')} className='block text-blue-600 cursor-pointer'>Connect</a>
-                    <a className='block text-blue-600' href='https://drive.google.com/file/d/1aMg3tmxVF1ORWV62aOZXzmT7ZmgGCX5n/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a className='block text-blue-600' href='https://drive.google.com/file/d/10LhpLtvPON4vRbjEtgLBmQGiSSCgNvsq/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
     
             )}

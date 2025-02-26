@@ -25,7 +25,7 @@ function About() {
         tackling challenges and building exceptional software.
       </p>
       <a
-        href="https://drive.google.com/file/d/10LhpLtvPON4vRbjEtgLBmQGiSSCgNvsq/view?usp=sharing"
+        href="https://drive.google.com/file/d/10LhpLtvPON4vRbjEtgLBmQGiSSCgNvsq/view?usp=drive_link"
         className="flex items-center space-x-2 bg-blue-500 text-white px-3 py-2 rounded-lg shadow-md text-lg font-semibold transition duration-300 hover:bg-green-500 hover:scale-105 animate-slideIn"
       >
         <span>Resume</span>
