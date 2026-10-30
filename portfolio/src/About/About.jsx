@@ -1,5 +1,4 @@
 import React from 'react';
-import Dp from '../assets/images/Dp.jpg'
 import Reveal from '../Reveal';
 
 function About() {
@@ -47,16 +46,16 @@ function About() {
                         <div className="relative mx-auto w-full max-w-[16rem] lg:w-fit lg:max-w-none">
                             <img
                                 className="mx-auto aspect-[4/5] w-full rounded-[2rem] object-cover object-top shadow-2xl shadow-blue-900/25 lg:h-[min(46svh,380px)] lg:w-auto"
-                                src={Dp}
+                                src="/Images/DP.jpeg"
                                 alt="Sai Deepak"
                             />
                             <div className="liquid-photo animate-bob absolute -left-6 bottom-14 rounded-xl px-3 py-1.5 md:-left-8">
-                                <p className="text-[10px] font-medium uppercase tracking-widest text-white/80">Now</p>
-                                <p className="text-xs font-semibold">T-Mobile · AI/ML</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-blue-700">Now</p>
+                                <p className="text-sm font-semibold">T-Mobile · AI/ML</p>
                             </div>
                             <div className="liquid-photo animate-bob absolute -right-6 bottom-4 rounded-xl px-3 py-1.5 md:-right-8" style={{ animationDelay: '-3s' }}>
-                                <p className="text-[10px] font-medium uppercase tracking-widest text-white/80">Education</p>
-                                <p className="text-xs font-semibold">M.S. · Fresno State</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-blue-700">Education</p>
+                                <p className="text-sm font-semibold">M.S. · Fresno State</p>
                             </div>
                         </div>
                     </Reveal>
