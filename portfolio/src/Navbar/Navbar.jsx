@@ -1,63 +1,94 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import About from '../About/About';
-import Education from '../Education/Education';
-import Experience from '../Professional/Experience';
-import Projects from '../Projects/Projects';
-import Connect from '../Connect/Connect';
+import { RESUME_URL } from '../data';
+
+const LINKS = [
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'education', label: 'Education' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'connect', label: 'Contact' },
+];
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 10);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
+    const scrollTo = (id) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        setIsMenuOpen(false);
     };
 
-    const Scroll = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsMenuOpen(false); // Close mobile menu after clicking
-        }
-    }
-
     return (
-        <nav className='w-full h-16 bg-white shadow-lg fixed top-0 left-0 right-0 z-10'> {/* Fixed to the top */}
-            <div className='flex justify-between items-center px-4 h-full'>
-                <a href='/' className='text-blue-600 text-2xl font-bold'>
-                    Sai Deepak Portfolio
+        <nav
+            className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${
+                scrolled || isMenuOpen
+                    ? 'border-b border-white/10 bg-[#0b0f1a]/80 backdrop-blur-xl'
+                    : 'border-b border-transparent'
+            }`}
+        >
+            <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5">
+                <a href="/" className="text-lg font-bold tracking-tight text-white">
+                    Sai Deepak<span className="text-indigo-400">.</span>
                 </a>
 
-                <div className='hidden md:flex space-x-6 items-center'>
-                <a onClick={() => Scroll('about')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>About</a>
-                    <a onClick={() => Scroll('education')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Education</a>
-                    <a onClick={() => Scroll('experience')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Professional Experience</a>
-                    <a onClick={() => Scroll('projects')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Projects</a>
-                    <a onClick={() => Scroll('connect')} className='text-blue-600 hover:scale-105 transform duration-300 text-lg font-semibold cursor-pointer'>Connect</a>
-                    <a className='text-white hover:bg-green-500 transform duration-300 text-lg bg-blue-500 rounded-lg p-1 px-2' href='https://drive.google.com/file/d/1aMg3tmxVF1ORWV62aOZXzmT7ZmgGCX5n/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Resume</a>
+                <div className="hidden items-center gap-8 md:flex">
+                    {LINKS.map((l) => (
+                        <button
+                            key={l.id}
+                            onClick={() => scrollTo(l.id)}
+                            className="text-sm font-medium text-slate-400 transition hover:text-white"
+                        >
+                            {l.label}
+                        </button>
+                    ))}
+                    <a
+                        href={RESUME_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-indigo-400/50 px-4 py-1.5 text-sm font-semibold text-indigo-300 transition hover:bg-indigo-500 hover:text-white"
+                    >
+                        Resume
+                    </a>
                 </div>
 
-                <div className='md:hidden flex items-center'>
-                    <button
-                        onClick={toggleMenu}
-                        className='text-black text-xl focus:outline-none'
-                    >
-                        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
-                    </button>
-                </div>
+                <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="text-xl text-white focus:outline-none md:hidden"
+                    aria-label="Toggle menu"
+                >
+                    <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+                </button>
             </div>
 
             {isMenuOpen && (
-                <div className='md:hidden bg-white px-4 py-3 space-y-4'>
-                    <a onClick={() => Scroll('about')} className='block text-blue-600 cursor-pointer'>About</a>
-                    <a onClick={() => Scroll('education')} className='block text-blue-600 cursor-pointer'>Education</a>
-                    <a onClick={() => Scroll('experience')} className='block text-blue-600 cursor-pointer'>Professional Experience</a>
-                    <a onClick={() => Scroll('projects')} className='block text-blue-600 cursor-pointer'>Projects</a>
-                    <a onClick={() => Scroll('connect')} className='block text-blue-600 cursor-pointer'>Connect</a>
-                    <a className='block text-blue-600' href='https://drive.google.com/file/d/1aMg3tmxVF1ORWV62aOZXzmT7ZmgGCX5n/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Resume</a>
+                <div className="space-y-1 px-5 pb-4 md:hidden">
+                    {LINKS.map((l) => (
+                        <button
+                            key={l.id}
+                            onClick={() => scrollTo(l.id)}
+                            className="block w-full py-2 text-left text-slate-300 hover:text-white"
+                        >
+                            {l.label}
+                        </button>
+                    ))}
+                    <a
+                        href={RESUME_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block py-2 font-semibold text-indigo-300"
+                    >
+                        Resume
+                    </a>
                 </div>
-    
             )}
         </nav>
     );

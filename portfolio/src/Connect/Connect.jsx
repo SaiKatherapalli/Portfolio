@@ -2,31 +2,44 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Reveal from '../Reveal';
+
+const SOCIALS = [
+    { icon: faLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/saideepakkumarreddy/' },
+    { icon: faGithub, label: 'GitHub', href: 'https://github.com/SaiDeepakKumarReddy' },
+    { icon: faInstagram, label: 'Instagram', href: 'https://www.instagram.com/saideepak11_?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr' },
+];
 
 const Connect = () => {
     return (
-        <div id="connect" className="bg-white flex flex-col spcace-x-2 m-2 mt-4 mb-4 rounded-lg shadow-md p-4 animate-slideIn border-2 shadow-slate-600 ">
-            <p className='text-center text-blue-600 mb-6 text-lg md:text-xl lg:text-2xl flex justify-center items-center'>
-                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-                kdeepakreddy1@gmail.com
-            </p>
-            <div className="flex justify-center space-x-6 mb-6 animate-slideIn">
-                <a href="https://www.linkedin.com/in/saideepakkumarreddy/" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} className="text-blue-600 text-4xl hover:text-blue-800 transition-colors duration-300" />
+        <section id="connect" className="section text-center">
+            <Reveal>
+                <p className="section-eyebrow">Contact</p>
+                <h2 className="section-title">Let's build something great</h2>
+                <p className="mx-auto mt-4 max-w-xl text-slate-400">
+                    Whether you're looking to collaborate, network, or discuss ideas, I'd love to connect.
+                </p>
+                <a href="mailto:kdeepakreddy1@gmail.com" className="btn-primary mt-8">
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                    kdeepakreddy1@gmail.com
                 </a>
-                <a href="https://github.com/SaiDeepakKumarReddy" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithub} className="text-gray-900 text-4xl hover:text-gray-700 transition-colors duration-300" />
-                </a>
-                <a href="https://www.instagram.com/saideepak11_?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faInstagram} className="text-pink-500 text-4xl hover:text-pink-700 transition-colors duration-300" />
-                </a>
-            </div>
-
-            <p className="text-md md:text-lg lg:text-xl text-blue-600 animate-slidein text-center">
-                Whether you're looking to collaborate, network, or discuss innovative ideas, I'd love to connect and create something extraordinary together!
-            </p>
-        </div>
+                <div className="mt-8 flex justify-center gap-4">
+                    {SOCIALS.map((s) => (
+                        <a
+                            key={s.label}
+                            href={s.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={s.label}
+                            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-slate-300 transition duration-300 hover:-translate-y-1 hover:border-indigo-400/50 hover:text-white"
+                        >
+                            <FontAwesomeIcon icon={s.icon} />
+                        </a>
+                    ))}
+                </div>
+            </Reveal>
+        </section>
     );
-}
+};
 
 export default Connect;
