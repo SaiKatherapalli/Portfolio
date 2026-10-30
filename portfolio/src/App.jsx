@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navbar from './Navbar/Navbar';
 import About from './About/About';
 import Education from './Education/Education';
@@ -10,17 +10,15 @@ import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
-    <div>
+    <div className="pt-16">
       <Navbar />
-      <main>
-        <About />
-        <Experience />
-        <Education />
-        <Projects />
-        <Connect />
-      </main>
+      <About />
+      <Education/>
+      <Experience/>
+      <Projects/>
+      <Connect />
       <Footer />
-      <Analytics />
+      <Analytics/>
     </div>
   );
 }

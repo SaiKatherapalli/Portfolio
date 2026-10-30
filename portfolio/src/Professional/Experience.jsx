@@ -1,48 +1,59 @@
 import React from 'react';
-import Reveal from '../Reveal';
-import { EXPERIENCE } from '../data';
 
 const Experience = () => {
     return (
-        <section id="experience" className="section">
-            <Reveal>
-                <p className="section-eyebrow">Career</p>
-                <h2 className="section-title">Professional Experience</h2>
-            </Reveal>
+        <div id="experience" className='mb-4 mt-3 m-2 p-8 shadow-md rounded-lg shadow-slate-600 space-y-6 animate-slideIn border-t border-t-gray-200 bg-gradient-to-r from-blue-600 to-blue-400'>
+            <h1 className='text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold'>Professional Experience</h1>
+            <div className='p-4 shadow-md rounded-lg shadow-slate-400 animate-slideIn border-t-gray-400 bg-blue-100'>
+                <h1 className='text-xl font-bold text-blue-600'>
+                    HashedTokens <span className='font-normal text-lg'>| Software Developer</span>
+                </h1>
+                <ul className='list-disc marker:text-blue-600 ml-5 text-justify'>
+                    <li>Developed and optimized responsive UI components using React.js and Tailwind CSS, and engineered scalable backend systems with Go and PostgreSQL, achieving 99.9% uptime and boosting user engagement.</li>
+                    <li>Automated workflows with Docker pipelines and AWS S3 integration, reducing deployment time by 40% and improving operational efficiency by 30%.</li>
+                </ul><br />
+                <div className='flex flex-wrap gap-4'>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>React Js</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Postgresql</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Go</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Aws</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Docker</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Redis</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Tailwind css</h4>
+                </div>
 
-            <div className="relative mt-12 space-y-8 border-l border-white/10 pl-8 md:pl-10">
-                {EXPERIENCE.map((job, i) => (
-                    <Reveal key={`${job.company}-${i}`} delay={i * 80}>
-                        <div className="relative">
-                            <span className="absolute -left-[2.55rem] top-7 h-3 w-3 rounded-full bg-indigo-400 ring-4 ring-[#0b0f1a] md:-left-[3.05rem]" />
-                            <div className="card p-6">
-                                <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
-                                    <h3 className="text-xl font-semibold text-white">
-                                        {job.role} <span className="text-indigo-300">· {job.company}</span>
-                                    </h3>
-                                    {job.period && (
-                                        <span className="text-sm text-slate-500">{job.period}</span>
-                                    )}
-                                </div>
-                                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-400 md:text-base">
-                                    {job.points.map((p) => (
-                                        <li key={p} className="flex gap-3">
-                                            <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-indigo-400" />
-                                            <span>{p}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="mt-5 flex flex-wrap gap-2">
-                                    {job.tags.map((t) => (
-                                        <span key={t} className="chip">{t}</span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </Reveal>
-                ))}
             </div>
-        </section>
+            <div className='p-4 shadow-md rounded-lg shadow-slate-400 animate-slideIn border-t-gray-500 bg-blue-100'>
+                <h1 className='text-xl font-bold text-blue-600'>California Department of Pesticide Regulation <span className='font-normal text-lg'> | Undergraduate Research Assistant</span></h1>
+                <ul className='list-disc marker:text-blue-600 ml-5 text-justify'>
+                    <li>Designed and developed interactive, user-friendly dashboards in Power BI to present key insights from complex datasets, enabling stakeholders to easily understand and make data-driven decisions.</li>
+                    <li>Enhanced data analysis workflows by creating automated macros in Excel, optimizing the processing of large datasets, and supporting seamless integration with Power BI visualizations for improved clarity and decision-making.</li>
+                </ul><br />
+                <div className='flex flex-wrap gap-4'>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Data Visualisation</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Power BI</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Excel</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Data Preprocesing</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Reports</h4>
+                </div>
+            </div>
+            <div className='p-4 shadow-md rounded-lg shadow-slate-400 animate-slideIn bg-blue-100 '>
+                <h1 className='text-xl font-bold text-blue-600'>Wipro <span className='font-normal text-lg'>| Full Stack Developer</span></h1>
+                <ul className='list-disc marker:text-blue-600 ml-5 text-justify'>
+                    <li>Engineered a secure e-commerce platform using the MERN stack, incorporating JWT authentication for data protection, and developed 15+ REST APIs to ensure seamless user access and robust backend functionality.</li>
+                    <li>Built a responsive frontend using React.js and Redux, enhancing user experience across devices, and collaborated in an agile team to deliver scalable features on time, improving overall system performance and maintainability.</li>
+                </ul><br />
+                <div className='flex flex-wrap gap-4'>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Mongo dB</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Express Js</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>React Js</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Node Js</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>JWT Authentication</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Web Development</h4>
+                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Javascript</h4>
+                </div>
+            </div>
+        </div >
     );
 };
 
