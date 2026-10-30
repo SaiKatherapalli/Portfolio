@@ -50,11 +50,11 @@ function About() {
                                 alt="Sai Deepak"
                             />
                             <div className="liquid-photo animate-bob absolute -left-6 bottom-14 rounded-xl px-3 py-1.5 md:-left-8">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-blue-700">Now</p>
+                                <p className="text-[10px] font-medium uppercase tracking-widest text-white/90">Now</p>
                                 <p className="text-sm font-semibold">T-Mobile · AI/ML</p>
                             </div>
                             <div className="liquid-photo animate-bob absolute -right-6 bottom-4 rounded-xl px-3 py-1.5 md:-right-8" style={{ animationDelay: '-3s' }}>
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-blue-700">Education</p>
+                                <p className="text-[10px] font-medium uppercase tracking-widest text-white/90">Education</p>
                                 <p className="text-sm font-semibold">M.S. · Fresno State</p>
                             </div>
                         </div>
