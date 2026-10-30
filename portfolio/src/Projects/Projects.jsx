@@ -3,14 +3,14 @@ import Reveal from '../Reveal'
 
 const Projects = () => {
     return (
-        <section id="projects" className="px-4 py-4 md:px-6">
-            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-5 py-12 md:px-10 md:py-16">
+        <section id="projects" className="px-3 py-2 md:px-6 md:py-4">
+            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-4 py-8 md:px-10 md:py-16">
                 <Reveal>
-                    <p className="mb-14 text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">What I've built</p>
+                    <p className="mb-8 text-center md:mb-14 text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">What I've built</p>
                 </Reveal>
 
                 <Reveal delay={100}>
-                    <div className="card-glass mx-auto w-fit max-w-full space-y-4 rounded-3xl p-6 md:p-8">
+                    <div className="card-glass mx-auto w-fit max-w-full space-y-4 rounded-3xl p-4 md:p-8">
                         <h3 className="text-xl font-semibold tracking-tight text-gray-900 md:text-2xl">
                             Resume Tailor <span className="font-normal text-lg text-gray-600">| AI / Full Stack</span>
                         </h3>
@@ -41,7 +41,7 @@ const Projects = () => {
                 </Reveal>
 
                 <Reveal delay={200}>
-                    <div className="mt-10 flex justify-center">
+                    <div className="mt-6 flex justify-center md:mt-10">
                         <button
                             className="btn-blue px-7 py-3 text-lg"
                             onClick={() =>

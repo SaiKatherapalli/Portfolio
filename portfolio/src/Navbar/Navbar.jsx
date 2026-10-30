@@ -44,11 +44,11 @@ const Navbar = () => {
         <div className='fixed inset-x-0 top-3 z-50 px-3 md:px-6'>
             <nav className={`liquid-light mx-auto max-w-[1400px] ${isMenuOpen ? 'rounded-3xl' : 'rounded-full'}`}> {/* floating glass pill */}
                 <div className='flex h-14 items-center justify-between px-5'>
-                    <a href='/' className='text-xl font-semibold tracking-tight text-gray-900'>
+                    <a href='/' className='whitespace-nowrap text-xl font-semibold tracking-tight text-gray-900'>
                         Sai Deepak
                     </a>
 
-                    <div className='hidden items-center space-x-1 md:flex'>
+                    <div className='hidden items-center space-x-1 lg:flex'>
                         {LINKS.map((l) => (
                             <a
                                 key={l.id}
@@ -61,7 +61,7 @@ const Navbar = () => {
                         <a className='btn-blue ml-3 px-4 py-1.5 text-sm' href={RESUME} target="_blank" rel="noopener noreferrer">Resume</a>
                     </div>
 
-                    <div className='flex items-center md:hidden'>
+                    <div className='flex items-center lg:hidden'>
                         <button
                             onClick={toggleMenu}
                             aria-label='Menu'
@@ -73,7 +73,7 @@ const Navbar = () => {
                 </div>
 
                 {isMenuOpen && (
-                    <div className='space-y-1 border-t border-white/60 px-4 py-3 md:hidden'>
+                    <div className='space-y-1 border-t border-white/60 px-4 py-3 lg:hidden'>
                         {LINKS.map((l) => (
                             <a key={l.id} onClick={() => Scroll(l.id)} className={`block cursor-pointer rounded-xl px-3 py-2 ${active === l.id ? 'chip-glass font-medium' : 'text-gray-700'}`}>{l.label}</a>
                         ))}

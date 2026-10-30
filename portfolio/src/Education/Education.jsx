@@ -25,10 +25,10 @@ const JOURNEY = [
 
 const Education = () => {
     return (
-        <section id="education" className="px-4 py-4 md:px-6">
-            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-5 py-12 md:px-10 md:py-16">
+        <section id="education" className="px-3 py-2 md:px-6 md:py-4">
+            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-4 py-8 md:px-10 md:py-16">
                 <Reveal>
-                    <p className="mb-14 text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">My journey</p>
+                    <p className="mb-8 text-center md:mb-14 text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">My journey</p>
                 </Reveal>
 
                 <div className="w-full">
@@ -61,18 +61,18 @@ const Education = () => {
                                     </div>
 
                                     {/* card */}
-                                    <div className="card-glass rounded-3xl p-6 md:p-8">
+                                    <div className="card-glass rounded-3xl p-4 md:p-8">
                                         <div className="mb-2 flex flex-wrap items-center gap-2 md:hidden">
                                             <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">{s.level}</span>
                                             <span className="text-sm font-semibold text-gray-600">{s.start} – {s.end}</span>
                                         </div>
 
-                                        <h2 className="text-xl font-semibold leading-snug tracking-tight text-gray-900 lg:text-2xl">{s.school}</h2>
+                                        <h2 className="text-lg font-semibold leading-snug tracking-tight text-gray-900 md:text-xl lg:text-2xl">{s.school}</h2>
                                         <h3 className="mt-1 text-base text-gray-600 md:text-lg">{s.degree}</h3>
 
-                                        <div className="mt-5 flex flex-wrap gap-3">
+                                        <div className="mt-4 flex flex-wrap gap-2 md:mt-5 md:gap-3">
                                             {s.courses.map((c) => (
-                                                <span key={c} className="chip-glass rounded-full px-4 py-2 text-sm md:text-base">
+                                                <span key={c} className="chip-glass rounded-full px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-base">
                                                     {c}
                                                 </span>
                                             ))}

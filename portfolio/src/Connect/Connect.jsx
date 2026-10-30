@@ -12,17 +12,17 @@ const SOCIALS = [
 
 const Connect = () => {
     return (
-        <section id="connect" className="px-4 py-4 md:px-6">
-            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-5 py-14 text-center md:py-20">
+        <section id="connect" className="px-3 py-2 md:px-6 md:py-4">
+            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-4 py-10 text-center md:py-20">
                 <div className="mx-auto flex max-w-3xl flex-col items-center">
                     <Reveal>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Get in touch</p>
                     </Reveal>
                     <Reveal delay={100}>
-                        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 md:text-5xl">Let's build something together</h1>
+                        <h1 className="mt-3 text-2xl font-semibold tracking-tight text-gray-900 md:text-5xl">Let's build something together</h1>
                     </Reveal>
                     <Reveal delay={200}>
-                        <p className="mt-5 text-base text-gray-700 md:text-xl">
+                        <p className="mt-4 text-sm text-gray-700 md:text-xl">
                             Whether you're looking to collaborate, network, or discuss innovative ideas, I'd love to connect and create something extraordinary together!
                         </p>
                     </Reveal>
@@ -30,7 +30,7 @@ const Connect = () => {
                     <Reveal delay={300}>
                         <a
                             href="mailto:saideepakkatherapalli@gmail.com"
-                            className="btn-blue mt-9 inline-flex items-center gap-3 px-7 py-3 text-lg"
+                            className="btn-blue mt-7 inline-flex max-w-full items-center gap-2 px-5 py-3 text-sm sm:gap-3 sm:px-7 sm:text-lg"
                         >
                             <FontAwesomeIcon icon={faEnvelope} />
                             saideepakkatherapalli@gmail.com
@@ -38,7 +38,7 @@ const Connect = () => {
                     </Reveal>
 
                     <Reveal delay={400}>
-                        <div className="mt-9 flex justify-center gap-5">
+                        <div className="mt-7 flex justify-center gap-4">
                             {SOCIALS.map((s) => (
                                 <a
                                     key={s.label}
