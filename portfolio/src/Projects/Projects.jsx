@@ -1,26 +1,62 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Reveal from '../Reveal'
+
 const Projects = () => {
     return (
-        <div id="projects" className="flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-blue-400 p-8 rounded-lg shadow-lg space-y-4 m-2">
-            <h2 className="text-2xl md:text-3xl font-bold text-white text-center">
-                Explore My Projects
-            </h2>
-            <p className="text-lg text-white text-center">
-                Click the button below to view my project repositories on GitHub and explore the work I've done.
-            </p>
-            <button
-                className="text-white bg-green-600 hover:bg-yellow-600 transition-all duration-300 ease-in-out px-6 py-3 text-xl rounded-lg shadow-md hover:scale-105"
-                onClick={() =>
-                    window.open(
-                        'https://github.com/SaiDeepakKumarReddy?tab=repositories',
-                        '_blank'
-                    )
-                }
-            >
-                View Project Repositories
-            </button>
-        </div>
+        <section id="projects" className="px-4 py-4 md:px-6">
+            <div className="liquid-light mx-auto max-w-6xl rounded-[2rem] px-5 py-12 md:px-10 md:py-16">
+                <Reveal>
+                    <p className="mb-14 text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">What I've built</p>
+                </Reveal>
 
+                <Reveal delay={100}>
+                    <div className="card-glass mx-auto w-fit max-w-full space-y-4 rounded-3xl p-6 md:p-8">
+                        <h3 className="text-xl font-semibold tracking-tight text-gray-900 md:text-2xl">
+                            Resume Tailor <span className="font-normal text-lg text-gray-600">| AI / Full Stack</span>
+                        </h3>
+                        <img
+                            src="/Images/resume_tailor.png"
+                            alt="Resume Tailor"
+                            className="h-auto w-[300px] max-w-full rounded-2xl border border-white shadow-lg"
+                        />
+                        <div className="flex flex-wrap gap-3 pt-2">
+                            <a
+                                href="https://resumetailor-pro.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-blue px-5 py-2"
+                            >
+                                Live Demo
+                            </a>
+                            <a
+                                href="https://github.com/SaiKatherapalli/resume-tailor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="chip-glass rounded-full px-5 py-2 font-medium"
+                            >
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </Reveal>
+
+                <Reveal delay={200}>
+                    <div className="mt-10 flex justify-center">
+                        <button
+                            className="btn-blue px-7 py-3 text-lg"
+                            onClick={() =>
+                                window.open(
+                                    'https://github.com/SaiKatherapalli?tab=repositories',
+                                    '_blank'
+                                )
+                            }
+                        >
+                            View Project Repositories
+                        </button>
+                    </div>
+                </Reveal>
+            </div>
+        </section>
     )
 }
 export default Projects

@@ -5,3 +5,205 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* keep section content clear of the floating navbar */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+@layer components {
+  /* ---- Liquid glass ---- */
+  .glass,
+  .glass-inner {
+    position: relative;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+  }
+
+  .glass {
+    background: rgba(37, 99, 235, 0.94);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    backdrop-filter: blur(28px) saturate(180%);
+    box-shadow:
+      0 24px 50px -14px rgba(37, 99, 235, 0.55),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.7),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.16),
+      inset 0 0 30px rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-inner {
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 14px 34px -10px rgba(10, 20, 80, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  }
+
+  .glass-inner:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 22px 44px -10px rgba(10, 20, 80, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-chip {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    box-shadow: 0 4px 14px -4px rgba(10, 20, 80, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .glass-chip:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-light {
+    background: #ffffff;
+    color: #1d4ed8;
+    font-weight: 600;
+    border-radius: 9999px;
+    box-shadow: 0 12px 28px -8px rgba(10, 20, 80, 0.55), inset 0 1px 0 #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px -8px rgba(10, 20, 80, 0.6), inset 0 1px 0 #fff;
+  }
+
+  /* clear, see-through glass: the shapes behind it show through, blurred */
+  .liquid {
+    position: relative;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    -webkit-backdrop-filter: blur(26px) saturate(170%);
+    backdrop-filter: blur(26px) saturate(170%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow:
+      0 40px 80px -24px rgba(10, 30, 100, 0.55),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.85),
+      inset 1.5px 0 0 rgba(255, 255, 255, 0.35),
+      inset 0 -1.5px 0 rgba(255, 255, 255, 0.25),
+      inset 0 0 50px rgba(255, 255, 255, 0.12);
+  }
+
+  /* glass that floats over a photo */
+  .liquid-photo {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    box-shadow:
+      0 20px 40px -12px rgba(10, 30, 100, 0.5),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.85),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  /* ---- light liquid glass: the whole page ---- */
+  .liquid-light {
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow:
+      0 30px 60px -24px rgba(30, 58, 138, 0.4),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 0 40px rgba(255, 255, 255, 0.25);
+  }
+
+  .card-glass {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 12px 30px -14px rgba(30, 58, 138, 0.4), inset 0 1px 0 #ffffff;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .card-glass:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 24px 44px -16px rgba(30, 58, 138, 0.45), inset 0 1px 0 #ffffff;
+  }
+
+  .chip-glass {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    color: #1d4ed8;
+    box-shadow: 0 4px 12px -6px rgba(30, 58, 138, 0.4), inset 0 1px 0 #ffffff;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .chip-glass:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  /* ---- light surfaces for the white bands ---- */
+  .card-light {
+    background: #f5f7fa;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease, background 0.5s ease;
+  }
+
+  .card-light:hover {
+    transform: translateY(-4px);
+    background: #ffffff;
+    box-shadow: 0 24px 48px -24px rgba(15, 23, 42, 0.28);
+  }
+
+  .chip-light {
+    background: #ffffff;
+    border: 1px solid #dbe4f3;
+    color: #1d4ed8;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .chip-light:hover {
+    transform: translateY(-2px);
+    border-color: #93b4f5;
+  }
+
+  .btn-blue {
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 9999px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-blue:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -10px rgba(37, 99, 235, 0.6);
+  }
+
+  .nav-active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 4px 14px -4px rgba(10, 20, 80, 0.4);
+  }
+
+  /* browsers without backdrop-filter get a more solid panel so text stays readable */
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass {
+      background: rgba(37, 99, 235, 0.85);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

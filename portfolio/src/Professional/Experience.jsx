@@ -1,59 +1,69 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import Reveal from '../Reveal';
+
+// Latest first.
+const JOBS = [
+    {
+        company: 'T-Mobile',
+        role: 'Software Engineer – AI/ML',
+        location: 'USA',
+        summary: 'Building AI-powered knowledge assistants and full-stack monitoring platforms that cut manual information retrieval time by 40%.',
+        skills: ['React', 'TypeScript', 'Node.js', 'Express.js', 'OpenAI', 'LangChain', 'InfluxDB', 'Grafana', 'REST APIs', 'GitLab CI', 'Docker', 'Kubernetes'],
+    },
+    {
+        company: 'Citi Group',
+        role: 'Software Developer',
+        location: 'USA',
+        summary: 'Built scalable Spring Boot microservices with Kafka for high-performance financial applications, cutting API response time by 30%.',
+        skills: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Apache Kafka', 'React', 'JPA / Hibernate', 'DynamoDB', 'Spring Security', 'GitLab CI', 'Docker', 'Kubernetes', 'JUnit', 'Mockito'],
+    },
+    {
+        company: 'Wipro Private Limited',
+        role: 'Associate Software Developer',
+        location: 'India',
+        summary: 'Developed and deployed a hospital management system that reduced patient registration time by 30% across departments.',
+        skills: ['Java', 'Spring Boot', 'React.js', 'MongoDB', 'MySQL', 'PostgreSQL', 'AWS', 'Jenkins', 'Docker', 'Kubernetes', 'JWT', 'OAuth2', 'ELK Stack'],
+    },
+];
 
 const Experience = () => {
     return (
-        <div id="experience" className='mb-4 mt-3 m-2 p-8 shadow-md rounded-lg shadow-slate-600 space-y-6 animate-slideIn border-t border-t-gray-200 bg-gradient-to-r from-blue-600 to-blue-400'>
-            <h1 className='text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold'>Professional Experience</h1>
-            <div className='p-4 shadow-md rounded-lg shadow-slate-400 animate-slideIn border-t-gray-400 bg-blue-100'>
-                <h1 className='text-xl font-bold text-blue-600'>
-                    HashedTokens <span className='font-normal text-lg'>| Software Developer</span>
-                </h1>
-                <ul className='list-disc marker:text-blue-600 ml-5 text-justify'>
-                    <li>Developed and optimized responsive UI components using React.js and Tailwind CSS, and engineered scalable backend systems with Go and PostgreSQL, achieving 99.9% uptime and boosting user engagement.</li>
-                    <li>Automated workflows with Docker pipelines and AWS S3 integration, reducing deployment time by 40% and improving operational efficiency by 30%.</li>
-                </ul><br />
-                <div className='flex flex-wrap gap-4'>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>React Js</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Postgresql</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Go</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Aws</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Docker</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Redis</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Tailwind css</h4>
-                </div>
+        <section id='experience' className='px-4 py-4 md:px-6'>
+            <div className='liquid-light mx-auto max-w-6xl rounded-[2rem] px-5 py-12 md:px-10 md:py-16'>
+                <Reveal>
+                    <p className='mb-14 text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-700'>Where I've worked</p>
+                </Reveal>
 
-            </div>
-            <div className='p-4 shadow-md rounded-lg shadow-slate-400 animate-slideIn border-t-gray-500 bg-blue-100'>
-                <h1 className='text-xl font-bold text-blue-600'>California Department of Pesticide Regulation <span className='font-normal text-lg'> | Undergraduate Research Assistant</span></h1>
-                <ul className='list-disc marker:text-blue-600 ml-5 text-justify'>
-                    <li>Designed and developed interactive, user-friendly dashboards in Power BI to present key insights from complex datasets, enabling stakeholders to easily understand and make data-driven decisions.</li>
-                    <li>Enhanced data analysis workflows by creating automated macros in Excel, optimizing the processing of large datasets, and supporting seamless integration with Power BI visualizations for improved clarity and decision-making.</li>
-                </ul><br />
-                <div className='flex flex-wrap gap-4'>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Data Visualisation</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Power BI</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Excel</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Data Preprocesing</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Reports</h4>
+                <div className='space-y-6'>
+                    {JOBS.map((job, i) => (
+                        <Reveal key={job.company} delay={i * 120}>
+                            <div className='card-glass rounded-3xl p-6 md:p-8'>
+                                <div className='flex flex-col gap-2 md:flex-row md:items-start md:justify-between'>
+                                    <h2 className='text-xl font-semibold leading-snug tracking-tight text-gray-900 lg:text-2xl'>
+                                        {job.company} <span className='font-normal text-base text-gray-600 md:text-lg lg:text-xl'>| {job.role}</span>
+                                    </h2>
+                                    <span className='chip-glass inline-flex w-fit flex-none items-center gap-2 rounded-full px-3 py-1 text-sm font-medium'>
+                                        <FontAwesomeIcon icon={faLocationDot} />
+                                        {job.location}
+                                    </span>
+                                </div>
+                                <p className='mt-3 text-base text-gray-700 md:text-lg'>{job.summary}</p>
+
+                                <div className='mt-5 flex flex-wrap gap-3'>
+                                    {job.skills.map((s) => (
+                                        <span key={s} className='chip-glass rounded-full px-4 py-2 text-sm md:text-base'>
+                                            {s}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </Reveal>
+                    ))}
                 </div>
             </div>
-            <div className='p-4 shadow-md rounded-lg shadow-slate-400 animate-slideIn bg-blue-100 '>
-                <h1 className='text-xl font-bold text-blue-600'>Wipro <span className='font-normal text-lg'>| Full Stack Developer</span></h1>
-                <ul className='list-disc marker:text-blue-600 ml-5 text-justify'>
-                    <li>Engineered a secure e-commerce platform using the MERN stack, incorporating JWT authentication for data protection, and developed 15+ REST APIs to ensure seamless user access and robust backend functionality.</li>
-                    <li>Built a responsive frontend using React.js and Redux, enhancing user experience across devices, and collaborated in an agile team to deliver scalable features on time, improving overall system performance and maintainability.</li>
-                </ul><br />
-                <div className='flex flex-wrap gap-4'>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Mongo dB</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Express Js</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>React Js</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Node Js</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>JWT Authentication</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Web Development</h4>
-                    <h4 className='text-blue-600 bg-gray-100 p-2 px-3 text-md rounded-full hover:scale-105 transition duration-300'>Javascript</h4>
-                </div>
-            </div>
-        </div >
+        </section>
     );
 };
 

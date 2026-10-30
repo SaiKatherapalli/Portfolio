@@ -1,26 +1,68 @@
 import React from 'react';
 import Dp from '../assets/images/Dp.jpg'
+import Reveal from '../Reveal';
+
 function About() {
     return (
-        <div id="about" className="border bg-white flex flex-col items-center space-y-6 m-2 mb-4 rounded-lg shadow-md p-8 animate-slideIn shadow-slate-600">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 p-4 text-center hover:scale-105 transition duration-300">
-                I'm Sai Deepak Kumar Reddy Katherapalli
-            </h1>
-            <img
-                className="w-48 h-48 lg:w-60 lg:h-60 rounded-full object-cover shadow-md border-2 border-blue-600 animate-slideIn"
-                src={Dp}
-                alt="Sai Deepak"
-            />
-            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-600 text-center animate-slideIn">
-                Passionate Software Developer
-            </p>
+        <section id="about" className="px-4 py-4 md:px-6">
+            {/* on desktop the hero fills exactly one screen below the navbar */}
+            <div className="liquid-light mx-auto flex max-w-6xl items-center rounded-[2rem] px-6 py-12 md:px-12 lg:h-[calc(100svh-8rem)] lg:min-h-[540px] lg:py-6">
+                <div className="grid w-full items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+                    {/* words */}
+                    <div className="text-center lg:text-left">
+                        <Reveal>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Hello, I'm</p>
+                        </Reveal>
+                        <Reveal delay={100}>
+                            <h1 className="mt-4 text-4xl font-semibold leading-[1.06] tracking-tight text-gray-900 md:text-5xl xl:text-6xl">
+                                Sai Deepak Kumar Reddy Katherapalli
+                            </h1>
+                        </Reveal>
+                        <Reveal delay={200}>
+                            <p className="mt-5 text-xl font-semibold text-blue-700 md:text-2xl">
+                                Software Developer | Aspiring AI/ML Engineer
+                            </p>
+                        </Reveal>
+                        <Reveal delay={300}>
+                            <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
+                                Building intelligent, production-ready software with Python, LLMs, RAG, LangChain and LangGraph,
+                                backed by full-stack experience in React.js, Go, AWS, and Docker.
+                                I thrive in Agile environments, turning AI ideas into reliable products.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={400}>
+                            <div className="mt-7 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+                                <a href="#projects" className="btn-blue px-6 py-2.5 text-base md:text-lg">
+                                    View My Work
+                                </a>
+                                <a href="#connect" className="chip-glass rounded-full px-6 py-2.5 text-base font-medium md:text-lg">
+                                    Get in touch
+                                </a>
+                            </div>
+                        </Reveal>
+                    </div>
 
-            <p className="text-sm md:text-lg lg:text-xl text-gray-700 text-center leading-relaxed max-w-4xl animate-slideIn">
-                Crafting scalable, user-focused solutions with expertise in Python, Java, React.js, AWS, and Docker.
-                I thrive in Agile environments, tackling challenges and building exceptional software.
-            </p>
-
-        </div>
+                    {/* photo, with glass cards floating over it */}
+                    <Reveal delay={200}>
+                        <div className="relative mx-auto w-full max-w-[16rem] lg:w-fit lg:max-w-none">
+                            <img
+                                className="mx-auto aspect-[4/5] w-full rounded-[2rem] object-cover object-top shadow-2xl shadow-blue-900/25 lg:h-[min(46svh,380px)] lg:w-auto"
+                                src={Dp}
+                                alt="Sai Deepak"
+                            />
+                            <div className="liquid-photo animate-bob absolute -left-6 bottom-14 rounded-xl px-3 py-1.5 md:-left-8">
+                                <p className="text-[10px] font-medium uppercase tracking-widest text-white/80">Now</p>
+                                <p className="text-xs font-semibold">T-Mobile · AI/ML</p>
+                            </div>
+                            <div className="liquid-photo animate-bob absolute -right-6 bottom-4 rounded-xl px-3 py-1.5 md:-right-8" style={{ animationDelay: '-3s' }}>
+                                <p className="text-[10px] font-medium uppercase tracking-widest text-white/80">Education</p>
+                                <p className="text-xs font-semibold">M.S. · Fresno State</p>
+                            </div>
+                        </div>
+                    </Reveal>
+                </div>
+            </div>
+        </section>
     );
 }
 
