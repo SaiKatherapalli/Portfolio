@@ -42,7 +42,7 @@ const Navbar = () => {
 
     return (
         <div className='fixed inset-x-0 top-3 z-50 px-3 md:px-6'>
-            <nav className={`liquid-light mx-auto max-w-6xl ${isMenuOpen ? 'rounded-3xl' : 'rounded-full'}`}> {/* floating glass pill */}
+            <nav className={`liquid-light mx-auto max-w-[1400px] ${isMenuOpen ? 'rounded-3xl' : 'rounded-full'}`}> {/* floating glass pill */}
                 <div className='flex h-14 items-center justify-between px-5'>
                     <a href='/' className='text-xl font-semibold tracking-tight text-gray-900'>
                         Sai Deepak

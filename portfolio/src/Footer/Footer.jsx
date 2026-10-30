@@ -11,7 +11,7 @@ const SOCIALS = [
 const Footer = () => {
     return (
         <footer className='px-4 pb-2 pt-4 md:px-6'>
-            <div className='liquid-light mx-auto flex max-w-6xl items-center justify-between rounded-3xl px-6 py-5'>
+            <div className='liquid-light mx-auto flex max-w-[1400px] items-center justify-between rounded-3xl px-6 py-5'>
                 <div className='flex flex-col text-sm text-gray-700'>
                     <p>Seattle, WA</p>
                     <p>United States</p>

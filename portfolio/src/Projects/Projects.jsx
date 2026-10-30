@@ -4,7 +4,7 @@ import Reveal from '../Reveal'
 const Projects = () => {
     return (
         <section id="projects" className="px-4 py-4 md:px-6">
-            <div className="liquid-light mx-auto max-w-6xl rounded-[2rem] px-5 py-12 md:px-10 md:py-16">
+            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-5 py-12 md:px-10 md:py-16">
                 <Reveal>
                     <p className="mb-14 text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">What I've built</p>
                 </Reveal>

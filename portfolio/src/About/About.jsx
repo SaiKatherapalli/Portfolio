@@ -6,7 +6,7 @@ function About() {
     return (
         <section id="about" className="px-4 py-4 md:px-6">
             {/* on desktop the hero fills exactly one screen below the navbar */}
-            <div className="liquid-light mx-auto flex max-w-6xl items-center rounded-[2rem] px-6 py-12 md:px-12 lg:h-[calc(100svh-8rem)] lg:min-h-[540px] lg:py-6">
+            <div className="liquid-light mx-auto flex max-w-[1400px] items-center rounded-[2rem] px-6 py-12 md:px-12 lg:h-[calc(100svh-8rem)] lg:min-h-[540px] lg:py-6">
                 <div className="grid w-full items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
                     {/* words */}
                     <div className="text-center lg:text-left">

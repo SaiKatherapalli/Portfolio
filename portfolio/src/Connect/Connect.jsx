@@ -13,7 +13,7 @@ const SOCIALS = [
 const Connect = () => {
     return (
         <section id="connect" className="px-4 py-4 md:px-6">
-            <div className="liquid-light mx-auto max-w-6xl rounded-[2rem] px-5 py-14 text-center md:py-20">
+            <div className="liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-5 py-14 text-center md:py-20">
                 <div className="mx-auto flex max-w-3xl flex-col items-center">
                     <Reveal>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Get in touch</p>

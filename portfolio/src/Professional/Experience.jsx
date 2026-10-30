@@ -31,7 +31,7 @@ const JOBS = [
 const Experience = () => {
     return (
         <section id='experience' className='px-4 py-4 md:px-6'>
-            <div className='liquid-light mx-auto max-w-6xl rounded-[2rem] px-5 py-12 md:px-10 md:py-16'>
+            <div className='liquid-light mx-auto max-w-[1400px] rounded-[2rem] px-5 py-12 md:px-10 md:py-16'>
                 <Reveal>
                     <p className='mb-14 text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-700'>Where I've worked</p>
                 </Reveal>
@@ -49,7 +49,7 @@ const Experience = () => {
                                         {job.location}
                                     </span>
                                 </div>
-                                <p className='mt-3 text-base text-gray-700 md:text-lg'>{job.summary}</p>
+                                <p className='mt-3 max-w-4xl text-base text-gray-700 md:text-lg'>{job.summary}</p>
 
                                 <div className='mt-5 flex flex-wrap gap-3'>
                                     {job.skills.map((s) => (
